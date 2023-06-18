@@ -29,6 +29,8 @@ int do_monty(char *op_code, unsigned int *line_number)
 	}
 	fprintf(stderr, "L%u: unknown instruction %s\n", *line_number, op_code);
 	strtok(NULL, " \r\t\n");
-	*line_number += 1;
+	if (strlen(op_code) > 0)
+		*line_number += 1;
+	exit(EXIT_FAILURE);
 	return (EXIT_FAILURE);
 }
