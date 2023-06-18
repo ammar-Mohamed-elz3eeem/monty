@@ -19,3 +19,9 @@ void free_stack(stack_t **stack)
 		free(head);
 	}
 }
+
+void free_buff(void)
+{
+	if (buff != NULL)
+		free(buff);
+}
