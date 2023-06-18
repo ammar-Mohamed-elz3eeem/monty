@@ -7,7 +7,7 @@
 
 void read_monty_file(FILE *fd)
 {
-	unsigned int line_number = 0;
+	unsigned int line_number = 1;
 	char *operation;
 	size_t size = 0;
 
@@ -19,7 +19,6 @@ void read_monty_file(FILE *fd)
 		if (operation != NULL)
 		{
 			do_monty(operation, &line_number);
-			line_number++;
 		}
 	}
 }

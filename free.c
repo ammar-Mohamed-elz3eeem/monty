@@ -20,6 +20,10 @@ void free_stack(stack_t **stack)
 	}
 }
 
+/**
+ * free_buff - frees the buffer in the program
+*/
+
 void free_buff(void)
 {
 	if (buff != NULL)
