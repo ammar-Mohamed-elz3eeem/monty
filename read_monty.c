@@ -16,10 +16,9 @@ void read_monty_file(FILE *fd)
 		if (strlen(buff) <= 1)
 			continue;
 		operation = strtok(buff, " \r\t\n");
+		line_number++;
 		if (operation != NULL)
-		{
-			do_monty(operation, &line_number);
-			line_number++;
-		}
+			if (do_monty(operation, &line_number) != 0)
+				exit(EXIT_FAILURE);
 	}
 }
