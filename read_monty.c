@@ -19,6 +19,7 @@ void read_monty_file(FILE *fd)
 		if (operation != NULL)
 		{
 			do_monty(operation, &line_number);
+			line_number++;
 		}
 	}
 }

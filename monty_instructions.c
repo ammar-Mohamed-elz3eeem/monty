@@ -22,15 +22,12 @@ int do_monty(char *op_code, unsigned int *line_number)
 		if (strcmp(instructions[i].opcode, op_code) == 0)
 		{
 			instructions[i].f(stack, *line_number);
-			*line_number += 1;
 			return (EXIT_SUCCESS);
 		}
 		i++;
 	}
 	fprintf(stderr, "L%u: unknown instruction %s\n", *line_number, op_code);
 	strtok(NULL, " \r\t\n");
-	if (strlen(op_code) > 0)
-		*line_number += 1;
 	exit(EXIT_FAILURE);
 	return (EXIT_FAILURE);
 }
