@@ -7,18 +7,19 @@
 
 void read_monty_file(FILE *fd)
 {
-	unsigned int line_number = 1;
+	unsigned int line_number = 0;
 	char *operation;
+	size_t size = 0;
 
-	while (fgets(buff, MAX_BUFF_SIZE, fd) != NULL)
+	while (getline(&buff, &size, fd) != EOF)
 	{
 		if (strlen(buff) <= 1)
 			continue;
 		operation = strtok(buff, " \r\t\n");
-		while (operation != NULL)
+		if (operation != NULL)
 		{
 			do_monty(operation, &line_number);
-			operation = strtok(NULL, " \r\t\n");
+			line_number++;
 		}
 	}
 }

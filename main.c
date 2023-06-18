@@ -2,7 +2,7 @@
 
 int type = 01;
 stack_t *stack[MAX_STACK_SIZE];
-char buff[MAX_BUFF_SIZE];
+char *buff;
 
 /**
  * main - entry point to monty program
@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
 	}
 	read_monty_file(file);
 	free_stack(stack);
+	free_buff();
 	fclose(file);
 	return (EXIT_SUCCESS);
 }
