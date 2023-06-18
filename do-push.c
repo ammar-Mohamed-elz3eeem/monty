@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * do_push - add new elemnt to stack or queue
+ * @stack: pointer to the stack
+ * @line_number: current line number in monty file
+*/
+
 void do_push(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp = NULL;
@@ -7,7 +13,7 @@ void do_push(stack_t **stack, unsigned int line_number)
 	char *num;
 
 	num = strtok(NULL, " \r\t\n");
-	if (num == NULL)
+	if (num == NULL || (_isdigit(num) == 0 && num[0] != '-'))
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		free_stack(stack);

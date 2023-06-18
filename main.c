@@ -4,6 +4,13 @@ int type = 01;
 stack_t *stack[MAX_STACK_SIZE];
 char buff[MAX_BUFF_SIZE];
 
+/**
+ * main - entry point to monty program
+ * @argc: number of cmd arguemnts
+ * @argv: actual values for command line args
+ * Return: 0 on success, 1 otherwise
+*/
+
 int main(int argc, char *argv[])
 {
 	FILE *file = NULL;

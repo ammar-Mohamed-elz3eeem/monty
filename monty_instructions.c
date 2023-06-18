@@ -1,5 +1,13 @@
 #include "monty.h"
 
+/**
+ * do_monty - check the operation needed to be done (push, pop, pall)
+ * on either stack or queue
+ * @op_code: operation code
+ * @line_number: pointer to the current line being read
+ * Return: 0 on success, 1 otherwise
+*/
+
 int do_monty(char *op_code, unsigned int *line_number)
 {
 	int i = 0;

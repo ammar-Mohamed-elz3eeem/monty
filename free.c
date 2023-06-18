@@ -1,5 +1,10 @@
 #include "monty.h"
 
+/**
+ * free_stack - frees stack from all values in it
+ * @stack: pointer to stack array
+*/
+
 void free_stack(stack_t **stack)
 {
 	stack_t *head = *stack;
@@ -13,10 +18,4 @@ void free_stack(stack_t **stack)
 		}
 		free(head);
 	}
-}
-
-void free_buff(char *buff)
-{
-	if (buff != NULL)
-		free(buff);
 }
