@@ -11,9 +11,10 @@
 int do_monty(char *op_code, unsigned int *line_number)
 {
 	int i = 0;
-	instruction_t instructions[3] = {
+	instruction_t instructions[] = {
 		{ "push", do_push },
 		{ "pall", do_pall },
+		{ "pint", do_pint },
 		{ NULL, NULL }
 	};
 
