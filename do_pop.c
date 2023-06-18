@@ -21,10 +21,9 @@ void do_pop(stack_t **stack, __attribute__((__unused__))
 		head->prev = NULL;
 		free((*stack)->prev);
 		*stack = head;
-	}
+	} 
 	else
 	{
-		free(*stack);
-		free(head);
+		stack = NULL;
 	}
 }
