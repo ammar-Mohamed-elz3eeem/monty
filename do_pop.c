@@ -9,21 +9,16 @@
 void do_pop(stack_t **stack, __attribute__((__unused__))
 				unsigned int line_number)
 {
-	stack_t *head = *stack;
+	stack_t *head;
 	if (*stack == NULL)
 	{
 		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
+		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
-	if ((*stack)->next != NULL)
-	{
-		head = (*stack)->next;
-		head->prev = NULL;
-		free((*stack)->prev);
-		*stack = head;
-	} 
-	else
-	{
-		stack = NULL;
-	}
+	head = *stack;
+	*stack = head->next;
+	if (head->next)
+		head->next->prev = NULL;
+	free(head);
 }
