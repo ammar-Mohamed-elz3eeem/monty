@@ -14,7 +14,7 @@ char buff[MAX_BUFF_SIZE];
 int main(int argc, char *argv[])
 {
 	FILE *file = NULL;
-	
+
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
