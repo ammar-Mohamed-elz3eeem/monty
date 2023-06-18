@@ -15,6 +15,7 @@ int do_monty(char *op_code, unsigned int *line_number)
 		{ "push", do_push },
 		{ "pall", do_pall },
 		{ "pint", do_pint },
+		{ "pop", do_pop },
 		{ NULL, NULL }
 	};
 

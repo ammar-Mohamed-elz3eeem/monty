@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * do_pint - this function will show all elements in stack or queue
+ * do_pint - this function will print last element in stack or queue
  * @stack: pointer to the stack
  * @line_number: current line number in monty file
 */
