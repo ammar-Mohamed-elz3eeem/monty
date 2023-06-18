@@ -13,8 +13,6 @@ void read_monty_file(FILE *fd)
 
 	while (getline(&buff, &size, fd) != EOF)
 	{
-		if (strlen(buff) <= 1)
-			continue;
 		operation = strtok(buff, " \r\t\n");
 		line_number++;
 		if (operation != NULL)
