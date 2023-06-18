@@ -13,7 +13,7 @@ void do_pall(stack_t **stack, __attribute__((__unused__))
 
 	if (tmp == NULL)
 		return;
-	while (tmp != NULL)
+	while (tmp)
 	{
 		printf("%d\n", tmp->n);
 		tmp = tmp->next;
