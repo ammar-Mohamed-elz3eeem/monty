@@ -1,0 +1,10 @@
+CC = gcc
+SRC = *.c
+NAME = monty
+rm = rm -f
+CFLAGS = -O2 -g -Wall -Werror -Wextra -pedantic
+all: $(SRC)
+	$(CC) $(SRC) $(CFLAGS) -o $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
